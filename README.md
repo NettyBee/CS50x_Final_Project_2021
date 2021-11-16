@@ -1,4 +1,4 @@
-# CS50x Final Project
+# CS50x 2021 Final Project
 # Interactive Fiction Game: "Who Turned off the Lights?"
 ## Video Demo:  [Who Turned off the Lights?](https://youtu.be/SWs1opgJhH4)
 ## Description:
