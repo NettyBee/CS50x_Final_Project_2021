@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags for Ink for web -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap and own CSS references -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Lynette's Interactive Fiction Game!</title>
+  </head>
+
+  <body class="any_light_off">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark justify-content-left sticky-top">
+            <!-- Navigation bar non-hidden unordered list elements -->
+            <ul class="nav navbar-nav">
+                <li>
+                    <!-- "Hamburger Menu" button-->
+                    <button title="Menu" class="btn btn-dark" type="button" style="border:none; background:transparent;" data-bs-toggle="offcanvas" data-bs-target="#OffCanvasNav" aria-controls="OffCanvasNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                 </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li>
+                    <!-- LightsOn/LightsOff button-->
+                    <button class="me-0" type=button id="lightsOut">
+                        <img alt="Lights Off" title="Lights Off" src="Images/light-bulb.png" style="width:45px;">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Navigation bar "offcanvas" menu -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="OffCanvasNav" aria-labelledby="OffCanvasNavLabel" style="background: black">
+            <!-- Offcanvas header including "Hamburger Menu" button -->
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title" style="color: white" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- Offcanvas body (contains footer) -->
+            <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="rewind" href="" title="Restart story from beginning">Restart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="save" href="" title="Save progress">Save</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="reload" href="" title="Reload save">Load</a>
+                        </li>
+                    </ul>
+
+                <!-- Offcanvas footer -->
+                <div class="offcanvas-footer">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="References.html" title="References">References</a>
+                            &#169; Copyright Lynette 2021
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+            <!-- Div element where the story is displayed -->
+            <div class="container" id="story">
+                <!-- Story headers -->
+                <div class="header">
+                    <h1>Who Turned off the Lights?</h1>
+                    <h4>by Lynette Walsh and YOU!</h4>
+                </div>
+                <!-- This is where the story is inserted by way of creating and appending elements -->
+
+            </div>
+
+        <!-- Javascript scripts -->
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Ink-specific scripts. -->
+        <!-- Translate the story written in Ink to a story object that javascript can interact with. -->
+        <script src="ink.js"></script>
+        <script src="Finished_story.js"></script>
+        <!-- Interacts and interprets the story object to display it on the main HTML page. -->
+        <script src="main.js"></script>
+        
+    </body>
+</html>
+

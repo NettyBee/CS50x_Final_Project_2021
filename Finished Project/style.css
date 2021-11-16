@@ -1,0 +1,262 @@
+/* Imports font family that includes Quattrocento */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+
+                        /*------ BODY ELEMENT-SPECIFIC SELECTORS ------*/
+/* Body Element-Selector */
+    body {
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        max-width: 100%;
+        min-height:100vh;
+    }
+
+/* Body Class-Selectors that give the illusion of lights */
+    .in_study{
+        background-image: radial-gradient(800px 800px at 98% 2.5%,#f3c663d7 30px, #b87e03d7, #5a3e1dd8, black);
+        background-attachment: fixed;
+        max-width: 100%;
+        color: white;
+    }
+
+    .in_hallway{
+        background-image: radial-gradient(circle farthest-corner at 50% 2.5%,#f3c663d7 0.5px, #b87e03d7, #5a3e1dd8, black);
+        background-attachment: fixed;
+        max-width: 100%;
+        color: white;
+    }
+
+    .in_bedroom{
+        background-image: radial-gradient(circle farthest-side at 100% 95%, #b87e03d7, #5a3e1dd8, black);
+        background-attachment: fixed;
+        max-width: 100%;
+        color: white;
+    }
+
+    .in_bathroom{
+        background-image: radial-gradient(circle farthest-corner at 50% 2.5%, white, whitesmoke,grey);
+        background-attachment: fixed;
+        max-width: 100%;
+        color: black;
+    }
+
+    .in_kitchen{
+        background-image: radial-gradient(circle farthest-corner at 50% 0%, whitesmoke 5px,#e0b454d7,grey 1500px);
+        background-attachment: fixed;
+        max-width: 100%;
+        color: black;
+    }
+
+    .any_light_off{
+        background-image: linear-gradient(to bottom,#02043c,#000000 );
+        background-attachment: fixed;
+        max-width: 100%;
+        color: white;
+    }
+
+    .switched {
+        transition: color 0.6s, background-color 0.6s;
+
+    }
+
+
+                        /*------ Nav ELEMENT-SPECIFIC SELECTORS ------*/
+/* Nav Element-Selectors */
+    /* Orientation of lightswitch button image. */
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+/* Nav Class-Selectors */
+    /* navbar adjustments. */
+    .navbar {
+        padding: 0 0;
+        background: transparent;
+    }
+
+/* Nav ID-Selectors */
+    /* Display of lightswitch button image. Changes based off current ID */
+    #lightsOut, #lightsOn {
+        background: transparent;
+        color: transparent;
+        border: none;
+    }
+    #lightsOut{
+        background-image: radial-gradient(20px 20px at 51% 40%, whitesmoke, transparent)
+    }
+
+
+
+                        /*------ Div ELEMENT-SPECIFIC SELECTORS ------*/
+/* Div Class-Selectors */
+
+    /* Class that contains the story text */
+    /* (Taken from the original ink styles.css file ) */
+    .container {
+        max-width: 600px;
+        min-width: 600px;
+        min-height:100vh;
+        background: transparent;
+        text-align: center;
+    }
+
+    /* References class. Only used by references page */
+    .references>ul{
+        font-size: 13pt;
+    }
+    .references{
+        max-width: 100vw;
+        min-height:100vh;
+        background: transparent;
+        text-align: center;
+    }
+
+    /* Combinator class selectors that hides the .container text & allows the fade-in transition to work */
+    /* (Taken from the original ink styles.css file ) */
+    .container .hide {
+        opacity: 0.0;
+
+    }
+
+    /* Combinator class selector that takes care of the fade-in transition (selects ALL elements that have elements with .container class as a parent). */
+    /* (Taken from the original ink styles.css file ) */
+    .container>* {
+        opacity: 1;
+        transition: opacity 1.0s;
+    }
+
+    /* Header class for story title*/
+    .header {
+        padding-bottom: 3em;
+    }
+
+
+    /* Class selectors for the off-canvas menu */
+    /* Off-canvas links (resting state) */
+    .offcanvas-body .navbar-nav .nav-item .nav-link{
+        color: #b97c2c;
+        transition: color 0.6s;
+        text-decoration: none;
+    }
+    /* Off-canvas links (hover-state) */
+    .offcanvas-body .navbar-nav .nav-item .nav-link:hover {
+        color: white;
+        transition: color 0.1s;
+    }
+
+    /* Off-canvas footer */
+    .offcanvas-footer {
+        position: absolute;
+        bottom:0;
+        left:0;
+        color: white;
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+        font-size: 13pt;
+        font-weight: lighter;
+    }
+
+
+
+                        /*------ <h1>-<h5> ELEMENT-SPECIFIC SELECTORS ------*/
+/* <h1>-<h5> Element-Selector */
+
+    /* HTML heading styles */
+    /* (Taken from the original ink styles.css file ) */
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-align: center;
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2{
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-style: italic;
+        color: #666;
+        font-weight: lighter;
+    }
+
+
+                        /*------ <p> ELEMENT-SPECIFIC SELECTORS ------*/
+
+/* <p> Class-Selectors */
+
+    /* Class applied to all choices (Will always appear inside <p> element by default.)*/
+    /* (Taken from the original ink styles.css file ) */
+    p{
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    }
+    .choice {
+        text-align: center;
+        line-height: 1.7em;
+    }
+
+    /* Class applied to first choice */
+    /* (Taken from the original ink styles.css file ) */
+    :not(.choice)+.choice {
+        padding-top: 1em;
+    }
+
+    /* Class applied to choice links */
+    /* (Modified from the original ink styles.css file) */
+    .choice a {
+        font-weight: medium;
+        font-size: 17pt;
+    }
+
+    /* Class for displaying story text */
+    .paragraph {
+        font-size: 15pt;
+        background: transparent;
+        line-height: 1.7em;
+        font-weight: lighter;
+    }
+
+
+
+                        /*------ <table> ELEMENT-SPECIFIC SELECTORS ------*/
+    table{
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .references-subtitle-1, .references-subtitle-2{
+        font-weight: bold;
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+        padding-bottom: none;
+        font-size:15pt;
+    }
+
+    .references-subtitle-1{
+        font-size: 20pt;
+    }
+
+                        /*------ <a> ELEMENT-SPECIFIC SELECTORS ------*/
+/* <a> Element-Selector */
+
+    /* Design of anchor links (resting state) */
+    /* (Taken from the original ink styles.css file ) */
+    a {
+        color: #b0631b;
+        font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+        transition: color 0.6s;
+        text-decoration: none;
+        font-size: 15pt;
+    }
+
+
+    /* Design of anchor links (hover state) */
+    /* (Taken from the original ink styles.css file ) */
+    a:hover {
+        color: white;
+        transition: color 0.1s;
+    }
+
