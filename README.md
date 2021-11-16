@@ -5,8 +5,10 @@
 **A ***Spooky*** Interactive Fiction (aka a choose-your-own-story) game written in Ink, adapted for the web via Javascript & HTML/CSS.**
 
 ## How to play?
-**Simply open the HTML file in a Google Chrome browser and play the game by choosing different options presented to you in the story, either by clicking the options or the lightswitch button when hinted.**
+**Simply download the "Finished Project" folder. Then open the HTML file in a Google Chrome browser and play the game by choosing different options presented to you in the story, either by clicking the options or the lightswitch button when hinted.**
 
+## What is "Original Ink 'Export for Web' Files"?
+**Essentially these files are the initial game that was created i.e the game without my modifications. These are the original files created by Inkle immediately after exporting the Ink story for the web. You can play this version of the game following the same instructions under the "How to play" header (download the "Original Ink 'Export for Web' Files" and open "index.html" instead).** 
 ---
 
 ## More details  
